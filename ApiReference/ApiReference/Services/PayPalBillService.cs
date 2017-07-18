@@ -13,9 +13,9 @@ namespace ApiReference.Services
             return "value";
         }
 
-        public object Pay(decimal amount)
+        public decimal Pay(decimal amount)
         {
-            throw new NotImplementedException();
+            return Math.Abs(amount);
         }
 
         public object Reimburse(int id, decimal amount)
@@ -23,9 +23,9 @@ namespace ApiReference.Services
             throw new NotImplementedException();
         }
 
-        public object Reverse(int id)
+        public bool Reverse(int id)
         {
-            throw new NotImplementedException();
+            return id % 2 == 0;
         }
     }
 }
